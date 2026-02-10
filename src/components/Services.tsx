@@ -1,47 +1,34 @@
-const services = [
+const audiences = [
   {
     icon: (
-      <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z" />
+      <svg className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17l-5.1-5.1m0 0L11.42 4.97m-5.1 5.1H21M3.42 19.17V4.97" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 21h19.5M3.75 3h16.5M5.25 3v18m13.5-18v18" />
       </svg>
     ),
-    title: "Identity Verification",
+    title: "Contractors & Trades",
     description:
-      "Document scanning, biometric matching, and liveness detection in a single API call. Supports 195+ countries and 6,000+ document types.",
-    features: ["Document OCR", "Face match", "Liveness check"],
+      "Roofing, HVAC, electrical, plumbing, remodeling — we know the trades inside and out. Your site will bring in more calls and better jobs.",
   },
   {
     icon: (
-      <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+      <svg className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016A3.001 3.001 0 0021 9.349m-18 0A2.997 2.997 0 005.25 6H18.75A2.997 2.997 0 0021 9.349m-18 0V6a2.997 2.997 0 012.25-2.9h11.5A2.997 2.997 0 0121 6v3.349" />
       </svg>
     ),
-    title: "KYC / AML Compliance",
+    title: "Small Businesses & Local Shops",
     description:
-      "Automated screening against global sanctions lists, PEP databases, and adverse media. Continuous monitoring keeps you compliant as regulations change.",
-    features: ["Sanctions screening", "PEP checks", "Ongoing monitoring"],
+      "Restaurants, salons, retail stores, professional services — we build sites that bring in customers and make your business look as good online as it is in person.",
   },
   {
     icon: (
-      <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605" />
+      <svg className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
       </svg>
     ),
-    title: "Fraud Prevention",
+    title: "Anyone Who Needs a Website",
     description:
-      "Real-time risk scoring, device fingerprinting, and behavioral analytics that catch synthetic identities and account takeover attempts before they cost you.",
-    features: ["Risk scoring", "Device intelligence", "Behavioral analysis"],
-  },
-  {
-    icon: (
-      <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
-      </svg>
-    ),
-    title: "Developer Platform",
-    description:
-      "RESTful APIs, SDKs for every major platform, and pre-built UI components. Go from integration to production in days, not months.",
-    features: ["REST API", "Native SDKs", "No-code flows"],
+      "Personal brands, e-commerce, nonprofits, organizations, or something completely unique — if you need a website, we'll build it. No project is too big or too small.",
   },
 ];
 
@@ -50,56 +37,33 @@ export default function Services() {
     <section id="services" className="relative py-[var(--spacing-5xl)] bg-surface">
       <div className="mx-auto max-w-[var(--width-content)] px-6 lg:px-12">
         {/* Section header */}
-        <div className="mb-16 max-w-[520px]">
+        <div className="mb-16 text-center">
           <span className="label mb-4 inline-block text-primary-500">
-            What we do
+            Who we work with
           </span>
-          <h2 className="mb-5">
-            Infrastructure for trust,{" "}
-            <span className="text-primary-500">built for scale</span>
+          <h2 className="mx-auto mb-5 max-w-[600px]">
+            We build websites for people who are too busy doing great work to
+            worry about their{" "}
+            <span className="text-primary-500">online presence</span>
           </h2>
-          <p className="text-lg text-slate-500">
-            Every service is designed to reduce manual review, cut onboarding
-            friction, and keep your compliance posture airtight.
-          </p>
         </div>
 
-        {/* Service cards — 2x2 grid */}
-        <div className="grid gap-6 md:grid-cols-2">
-          {services.map((service) => (
+        {/* Audience cards — 3 column */}
+        <div className="grid gap-6 md:grid-cols-3">
+          {audiences.map((item) => (
             <article
-              key={service.title}
-              className="group relative rounded-[var(--radius-lg)] border border-slate-200/80 bg-surface-card p-8 transition-all hover:border-primary-200 hover:shadow-[0_4px_24px_rgba(15,43,28,0.06)] lg:p-10"
+              key={item.title}
+              className="group relative rounded-[var(--radius-lg)] border border-slate-200/80 bg-surface-card p-8 text-center transition-all hover:border-primary-200 hover:shadow-[0_4px_24px_rgba(15,43,28,0.06)] lg:p-10"
             >
               {/* Icon */}
-              <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-[var(--radius-md)] bg-primary-50 text-primary-500 transition-colors group-hover:bg-primary-100">
-                {service.icon}
+              <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-[var(--radius-lg)] bg-primary-50 text-primary-500 transition-colors group-hover:bg-primary-100">
+                {item.icon}
               </div>
 
-              {/* Content */}
-              <h3 className="mb-3">{service.title}</h3>
-              <p className="mb-6 text-[16px] leading-relaxed text-slate-500">
-                {service.description}
+              <h3 className="mb-3">{item.title}</h3>
+              <p className="text-[16px] leading-relaxed text-slate-500">
+                {item.description}
               </p>
-
-              {/* Feature chips */}
-              <div className="flex flex-wrap gap-2">
-                {service.features.map((feature) => (
-                  <span
-                    key={feature}
-                    className="rounded-full bg-primary-50 px-3 py-1 text-[13px] font-medium text-primary-600"
-                  >
-                    {feature}
-                  </span>
-                ))}
-              </div>
-
-              {/* Subtle arrow indicator */}
-              <div className="absolute right-8 top-8 text-slate-300 transition-all group-hover:translate-x-1 group-hover:text-primary-400 lg:right-10 lg:top-10">
-                <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
-                </svg>
-              </div>
             </article>
           ))}
         </div>

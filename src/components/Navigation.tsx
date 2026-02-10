@@ -2,10 +2,15 @@
 
 import { useState } from "react";
 
-const navLinks = [
+const navLinksLeft = [
+  { label: "Home", href: "#" },
+  { label: "Our Work", href: "#work" },
   { label: "Services", href: "#services" },
+  { label: "Pricing", href: "#pricing" },
+];
+
+const navLinksRight = [
   { label: "About", href: "#about" },
-  { label: "Results", href: "#results" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -20,21 +25,11 @@ export default function Navigation() {
           role="navigation"
           aria-label="Main navigation"
         >
-          {/* Logo */}
-          <a href="/" className="flex items-center gap-2.5">
-            <div className="flex h-9 w-9 items-center justify-center rounded-[var(--radius-sm)] bg-accent">
-              <span className="text-sm font-bold text-primary">ID</span>
-            </div>
-            <span className="text-lg font-semibold tracking-tight text-white">
-              Idenlabs
-            </span>
-          </a>
-
-          {/* Desktop links */}
+          {/* Left links */}
           <div className="hidden items-center gap-1 md:flex">
-            {navLinks.map((link) => (
+            {navLinksLeft.map((link) => (
               <a
-                key={link.href}
+                key={link.href + link.label}
                 href={link.href}
                 className="rounded-[var(--radius-sm)] px-4 py-2 text-[15px] font-medium text-white/70 transition-colors hover:bg-white/5 hover:text-white"
               >
@@ -43,19 +38,34 @@ export default function Navigation() {
             ))}
           </div>
 
-          {/* Desktop CTA */}
-          <div className="hidden items-center gap-3 md:flex">
+          {/* Center Logo */}
+          <a href="/" className="flex items-center gap-2.5">
+            <div className="flex h-9 w-9 items-center justify-center rounded-[var(--radius-sm)] bg-accent">
+              <svg className="h-5 w-5 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 2.18l7 3.12v4.7c0 4.83-3.13 9.37-7 10.5-3.87-1.13-7-5.67-7-10.5V6.3l7-3.12z" />
+              </svg>
+            </div>
+            <span className="text-lg font-bold tracking-tight text-white">
+              IDEN
+            </span>
+          </a>
+
+          {/* Right links */}
+          <div className="hidden items-center gap-1 md:flex">
+            {navLinksRight.map((link) => (
+              <a
+                key={link.href + link.label}
+                href={link.href}
+                className="rounded-[var(--radius-sm)] px-4 py-2 text-[15px] font-medium text-white/70 transition-colors hover:bg-white/5 hover:text-white"
+              >
+                {link.label}
+              </a>
+            ))}
             <a
               href="#contact"
-              className="rounded-[var(--radius-sm)] px-4 py-2 text-[15px] font-medium text-white/70 transition-colors hover:text-white"
+              className="ml-2 rounded-[var(--radius-md)] bg-accent px-5 py-2.5 text-[15px] font-semibold text-primary transition-all hover:bg-accent-light"
             >
-              Log in
-            </a>
-            <a
-              href="#contact"
-              className="rounded-[var(--radius-md)] bg-accent px-5 py-2.5 text-[15px] font-semibold text-primary transition-all hover:bg-accent-light"
-            >
-              Get Started
+              Free Consultation
             </a>
           </div>
 
@@ -95,9 +105,9 @@ export default function Navigation() {
         {mobileOpen && (
           <div className="mx-4 mt-2 overflow-hidden rounded-[var(--radius-lg)] border border-white/10 bg-primary/95 backdrop-blur-xl lg:mx-6">
             <div className="flex flex-col p-4">
-              {navLinks.map((link) => (
+              {[...navLinksLeft, ...navLinksRight].map((link) => (
                 <a
-                  key={link.href}
+                  key={link.href + link.label}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
                   className="rounded-[var(--radius-sm)] px-4 py-3 text-[15px] font-medium text-white/70 transition-colors hover:bg-white/5 hover:text-white"
@@ -110,7 +120,7 @@ export default function Navigation() {
                 href="#contact"
                 className="mt-1 rounded-[var(--radius-md)] bg-accent px-5 py-3 text-center text-[15px] font-semibold text-primary transition-all hover:bg-accent-light"
               >
-                Get Started
+                Free Consultation
               </a>
             </div>
           </div>

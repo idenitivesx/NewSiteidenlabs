@@ -1,7 +1,11 @@
+"use client";
+
+import { useState } from "react";
+
 export default function Hero() {
   return (
     <section className="relative min-h-[100vh] overflow-hidden bg-primary">
-      {/* Background texture — subtle gradient + grain */}
+      {/* Background texture */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary-800 to-primary-900" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_50%,_rgba(26,107,74,0.15)_0%,_transparent_70%)]" />
@@ -9,119 +13,76 @@ export default function Hero() {
       </div>
 
       <div className="relative mx-auto flex min-h-[100vh] max-w-[var(--width-wide)] items-center px-6 pt-28 pb-20 lg:px-12">
-        <div className="grid w-full gap-16 lg:grid-cols-[1fr_0.85fr] lg:items-center">
+        <div className="grid w-full gap-12 lg:grid-cols-[1fr_1.1fr] lg:items-center lg:gap-16">
           {/* Left — Message block */}
-          <div className="max-w-[640px]">
+          <div className="max-w-[560px]">
             {/* Eyebrow */}
             <div className="label mb-6 inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/10 px-4 py-1.5 text-accent">
               <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent" />
-              Trusted by regulated industries
+              Web design that drives revenue
             </div>
 
-            {/* H1 — Outcome-first headline */}
+            {/* H1 */}
             <h1 className="mb-6 text-white">
-              Verify identities.{" "}
-              <span className="text-accent">Protect revenue.</span>
+              Professional Websites That{" "}
+              <span className="text-accent">Actually Grow</span> Your Business
             </h1>
 
             {/* Value subtext */}
-            <p className="mb-8 max-w-[520px] text-lg leading-relaxed text-white/60">
-              Enterprise identity verification and compliance infrastructure
-              that reduces fraud losses, accelerates onboarding, and keeps you
-              ahead of regulatory requirements.
+            <p className="mb-8 max-w-[480px] text-lg leading-relaxed text-white/60">
+              Whether you&apos;re a small business, a local organization, or
+              anyone who needs a professional website — we build sites that bring
+              in real results. No tech jargon, no long contracts, no headaches.
             </p>
 
-            {/* Proof line */}
-            <div className="mb-10 flex items-center gap-6 text-[15px] text-white/40">
+            {/* Proof points */}
+            <div className="mb-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-[15px] text-white/40">
               <span className="flex items-center gap-2">
                 <svg className="h-4 w-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
-                SOC 2 Type II
+                Money-Back Guarantee
               </span>
               <span className="flex items-center gap-2">
                 <svg className="h-4 w-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
-                99.7% uptime
+                Live in 2 Weeks
               </span>
               <span className="flex items-center gap-2">
                 <svg className="h-4 w-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
-                GDPR ready
+                No Hidden Fees
               </span>
             </div>
 
             {/* CTAs */}
             <div className="flex flex-wrap items-center gap-4">
-              {/* Primary CTA — solid accent */}
               <a
                 href="#contact"
                 className="inline-flex items-center gap-2 rounded-[var(--radius-md)] bg-accent px-7 py-3.5 text-[16px] font-semibold text-primary shadow-[0_1px_2px_rgba(0,0,0,0.1),_0_4px_12px_rgba(212,168,83,0.25)] transition-all hover:bg-accent-light hover:shadow-[0_1px_2px_rgba(0,0,0,0.1),_0_6px_20px_rgba(212,168,83,0.35)]"
               >
-                Start verification
+                Get My Free Consultation
                 <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </a>
-
-              {/* Secondary CTA — ghost */}
               <a
-                href="#services"
+                href="#work"
                 className="inline-flex items-center gap-2 rounded-[var(--radius-md)] border border-white/15 px-7 py-3.5 text-[16px] font-medium text-white/70 transition-all hover:border-white/25 hover:text-white"
               >
-                See how it works
+                See Our Work
               </a>
             </div>
+
+            <p className="mt-5 text-[14px] text-white/30">
+              100% free, no obligation. If we can&apos;t help you, we&apos;ll tell you.
+            </p>
           </div>
 
-          {/* Right — Metric cards (visual proof, not decoration) */}
-          <div className="hidden lg:block">
-            <div className="grid gap-4">
-              {/* Top row */}
-              <div className="grid grid-cols-2 gap-4">
-                <MetricCard
-                  value="2.4M+"
-                  label="Verifications this year"
-                  accent
-                />
-                <MetricCard
-                  value="<3s"
-                  label="Average verification time"
-                />
-              </div>
-              {/* Bottom row */}
-              <div className="grid grid-cols-2 gap-4">
-                <MetricCard
-                  value="98.6%"
-                  label="First-pass approval rate"
-                />
-                <MetricCard
-                  value="340+"
-                  label="Enterprise clients"
-                  accent
-                />
-              </div>
-              {/* Wide card */}
-              <div className="rounded-[var(--radius-lg)] border border-white/[0.06] bg-white/[0.03] p-6 backdrop-blur-sm">
-                <div className="mb-3 flex items-center gap-2">
-                  <div className="h-2 w-2 rounded-full bg-green-400 animate-pulse" />
-                  <span className="label text-green-400/80">System operational</span>
-                </div>
-                <div className="flex items-end gap-1">
-                  {/* Fake uptime bars */}
-                  {Array.from({ length: 30 }, (_, i) => (
-                    <div
-                      key={i}
-                      className="w-full rounded-sm bg-green-400/30"
-                      style={{ height: `${16 + Math.random() * 20}px` }}
-                    />
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* Right — Contact form */}
+          <ConsultationForm />
         </div>
       </div>
 
@@ -131,25 +92,165 @@ export default function Hero() {
   );
 }
 
-function MetricCard({
-  value,
-  label,
-  accent = false,
-}: {
-  value: string;
-  label: string;
-  accent?: boolean;
-}) {
-  return (
-    <div className="rounded-[var(--radius-lg)] border border-white/[0.06] bg-white/[0.03] p-6 backdrop-blur-sm">
-      <div
-        className={`mb-1 text-3xl font-bold tracking-tight ${
-          accent ? "text-accent" : "text-white"
-        }`}
-      >
-        {value}
+function ConsultationForm() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    projectType: "",
+    message: "",
+  });
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitted(true);
+  };
+
+  if (submitted) {
+    return (
+      <div className="rounded-[var(--radius-xl)] border border-white/10 bg-white p-8 text-center shadow-2xl lg:p-10">
+        <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary-50">
+          <svg className="h-7 w-7 text-primary-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <h3 className="mb-2 text-primary">Thank you!</h3>
+        <p className="text-slate-500">
+          We&apos;ve received your request. We&apos;ll be in touch within 24 hours to discuss your project.
+        </p>
       </div>
-      <div className="text-[14px] text-white/40">{label}</div>
-    </div>
+    );
+  }
+
+  return (
+    <form
+      onSubmit={handleSubmit}
+      className="rounded-[var(--radius-xl)] border border-white/10 bg-white p-8 shadow-2xl lg:p-10"
+    >
+      <h3 className="mb-6 text-primary">Get Your Free Consultation</h3>
+
+      <div className="grid gap-5 sm:grid-cols-2">
+        {/* Name */}
+        <div>
+          <label
+            htmlFor="name"
+            className="mb-1.5 block text-[14px] font-medium text-slate-700"
+          >
+            Your Name <span className="text-red-500">*</span>
+          </label>
+          <input
+            id="name"
+            type="text"
+            required
+            placeholder="John Smith"
+            value={formData.name}
+            onChange={(e) =>
+              setFormData({ ...formData, name: e.target.value })
+            }
+            className="w-full rounded-[var(--radius-md)] border border-slate-200 bg-surface px-4 py-3 text-[15px] text-primary placeholder-slate-400 transition-colors focus:border-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-100"
+          />
+        </div>
+
+        {/* Email */}
+        <div>
+          <label
+            htmlFor="email"
+            className="mb-1.5 block text-[14px] font-medium text-slate-700"
+          >
+            Email <span className="text-red-500">*</span>
+          </label>
+          <input
+            id="email"
+            type="email"
+            required
+            placeholder="john@example.com"
+            value={formData.email}
+            onChange={(e) =>
+              setFormData({ ...formData, email: e.target.value })
+            }
+            className="w-full rounded-[var(--radius-md)] border border-slate-200 bg-surface px-4 py-3 text-[15px] text-primary placeholder-slate-400 transition-colors focus:border-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-100"
+          />
+        </div>
+
+        {/* Phone */}
+        <div>
+          <label
+            htmlFor="phone"
+            className="mb-1.5 block text-[14px] font-medium text-slate-700"
+          >
+            Phone Number
+          </label>
+          <input
+            id="phone"
+            type="tel"
+            placeholder="(614) 407-5190"
+            value={formData.phone}
+            onChange={(e) =>
+              setFormData({ ...formData, phone: e.target.value })
+            }
+            className="w-full rounded-[var(--radius-md)] border border-slate-200 bg-surface px-4 py-3 text-[15px] text-primary placeholder-slate-400 transition-colors focus:border-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-100"
+          />
+        </div>
+
+        {/* Project Type */}
+        <div>
+          <label
+            htmlFor="projectType"
+            className="mb-1.5 block text-[14px] font-medium text-slate-700"
+          >
+            Project Type
+          </label>
+          <select
+            id="projectType"
+            value={formData.projectType}
+            onChange={(e) =>
+              setFormData({ ...formData, projectType: e.target.value })
+            }
+            className="w-full appearance-none rounded-[var(--radius-md)] border border-slate-200 bg-surface px-4 py-3 text-[15px] text-primary transition-colors focus:border-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-100"
+          >
+            <option value="">Select a type</option>
+            <option value="basic">Basic Site</option>
+            <option value="starter">Starter Website</option>
+            <option value="business">Business Website</option>
+            <option value="custom">Custom Project</option>
+            <option value="redesign">Website Redesign</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      </div>
+
+      {/* Message */}
+      <div className="mt-5">
+        <label
+          htmlFor="message"
+          className="mb-1.5 block text-[14px] font-medium text-slate-700"
+        >
+          Tell Us About Your Project
+        </label>
+        <textarea
+          id="message"
+          rows={4}
+          placeholder="What does your business do? What do you need?"
+          value={formData.message}
+          onChange={(e) =>
+            setFormData({ ...formData, message: e.target.value })
+          }
+          className="w-full resize-none rounded-[var(--radius-md)] border border-slate-200 bg-surface px-4 py-3 text-[15px] text-primary placeholder-slate-400 transition-colors focus:border-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-100"
+        />
+      </div>
+
+      {/* Submit */}
+      <button
+        type="submit"
+        className="mt-6 w-full rounded-[var(--radius-md)] bg-primary px-6 py-3.5 text-[16px] font-semibold text-white shadow-lg transition-all hover:bg-primary-600 hover:shadow-xl"
+      >
+        Get My Free Consultation
+      </button>
+
+      <p className="mt-3 text-center text-[13px] text-slate-400">
+        Takes 2 minutes. No commitment.
+      </p>
+    </form>
   );
 }

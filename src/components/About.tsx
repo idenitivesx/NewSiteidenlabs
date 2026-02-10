@@ -1,40 +1,40 @@
 const stats = [
-  { value: "8+", label: "Years in production" },
-  { value: "340+", label: "Enterprise clients" },
-  { value: "195", label: "Countries supported" },
-  { value: "24/7", label: "Engineering support" },
+  { value: "50+", label: "Websites delivered" },
+  { value: "2 wk", label: "Average turnaround" },
+  { value: "100%", label: "Client satisfaction" },
+  { value: "0", label: "Long-term contracts" },
 ];
 
 export default function About() {
   return (
-    <section id="about" className="relative py-[var(--spacing-5xl)] bg-surface">
+    <section id="about" className="relative py-[var(--spacing-5xl)] bg-surface-warm">
       <div className="mx-auto max-w-[var(--width-content)] px-6 lg:px-12">
         <div className="grid gap-16 lg:grid-cols-[1fr_1fr] lg:items-center">
           {/* Left — narrative */}
           <div>
             <span className="label mb-4 inline-block text-primary-500">
-              About Idenlabs
+              About Iden Labs
             </span>
             <h2 className="mb-6">
-              Built by compliance engineers,{" "}
-              <span className="text-primary-500">not just developers</span>
+              We build websites that{" "}
+              <span className="text-primary-500">work as hard</span> as you do
             </h2>
             <div className="space-y-4 text-[16px] leading-relaxed text-slate-500">
               <p>
-                Idenlabs was founded by a team that spent years inside regulated
-                financial institutions — dealing with the same broken
-                verification workflows, the same compliance bottlenecks, and the
-                same vendor lock-in that slows everyone down.
+                Iden Labs started because we saw too many small businesses
+                getting ripped off by agencies that charge thousands for sites
+                that don&apos;t convert. Or worse — getting stuck with DIY
+                builders that look like everyone else&apos;s.
               </p>
               <p>
-                We built the platform we wished existed: fast enough for
-                consumer fintech, thorough enough for banking, and flexible
-                enough to handle the regulatory landscape as it actually is —
-                not how vendors pretend it is.
+                We keep it simple: you tell us about your business, we build
+                you a professional website that brings in real results. No tech
+                jargon, no monthly retainers, no surprises on the invoice.
               </p>
               <p>
-                Every feature ships because a compliance officer needed it, not
-                because a product manager thought it looked good on a roadmap.
+                Every site we build is custom-designed, mobile-friendly, and
+                optimized to actually do something — whether that&apos;s
+                getting phone calls, booking appointments, or selling products.
               </p>
             </div>
           </div>

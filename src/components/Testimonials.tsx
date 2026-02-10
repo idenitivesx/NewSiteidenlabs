@@ -1,47 +1,43 @@
 const testimonials = [
   {
     quote:
-      "Switching to Idenlabs cut our manual review queue by 74% in the first month. Our compliance team finally has time to focus on edge cases instead of routine checks.",
-    name: "Rachel Torres",
-    role: "Head of Compliance",
-    company: "Meridian Financial",
-    metric: "74% fewer manual reviews",
+      "I put off getting a website for years because every agency wanted thousands of dollars and months of my time. Iden Labs had my site live in 10 days and I started getting calls the first week.",
+    name: "Mike Rivera",
+    role: "Owner",
+    company: "Rivera Roofing & Siding",
+    metric: "3x more inquiries",
   },
   {
     quote:
-      "We evaluated five vendors. Idenlabs was the only one that could handle our document volume without degraded accuracy. The API is clean and the support team actually understands compliance.",
-    name: "James Okoro",
-    role: "CTO",
-    company: "PayBridge",
-    metric: "5x document throughput",
+      "They made the whole process painless. I told them about my salon, they sent me a beautiful design, I approved it, and it was done. My clients love the online booking.",
+    name: "Ashley Kim",
+    role: "Owner",
+    company: "Glow Studio",
+    metric: "Online booking added",
   },
   {
     quote:
-      "Our onboarding drop-off rate went from 31% to 12% after integrating Idenlabs. Faster verification means more customers actually complete signup.",
-    name: "Sarah Chen",
-    role: "VP Product",
-    company: "NovaPay",
-    metric: "19% drop-off reduction",
+      "We needed a site fast for a fundraiser and they delivered in under a week. Professional, responsive, and the donation page worked flawlessly. We raised 40% more than expected.",
+    name: "David Thompson",
+    role: "Director",
+    company: "Central Ohio Youth Alliance",
+    metric: "40% more donations",
   },
 ];
 
 export default function Testimonials() {
   return (
-    <section id="results" className="relative py-[var(--spacing-5xl)] bg-surface-warm">
+    <section className="relative py-[var(--spacing-5xl)] bg-surface">
       <div className="mx-auto max-w-[var(--width-content)] px-6 lg:px-12">
         {/* Section header */}
         <div className="mb-16 text-center">
           <span className="label mb-4 inline-block text-primary-500">
-            Client outcomes
+            What clients say
           </span>
           <h2 className="mx-auto mb-5 max-w-[600px]">
-            Measured results,{" "}
-            <span className="text-primary-500">not promises</span>
+            Real results from{" "}
+            <span className="text-primary-500">real businesses</span>
           </h2>
-          <p className="mx-auto max-w-[480px] text-lg text-slate-500">
-            These are real numbers from production deployments — not projections
-            from a sales deck.
-          </p>
         </div>
 
         {/* Testimonial cards */}
@@ -63,7 +59,6 @@ export default function Testimonials() {
 
               {/* Attribution */}
               <div className="flex items-center gap-3 border-t border-slate-100 pt-6">
-                {/* Avatar placeholder — initials */}
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-50 text-[13px] font-semibold text-primary-600">
                   {t.name
                     .split(" ")

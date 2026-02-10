@@ -1,53 +1,52 @@
 const footerLinks = {
-  Product: [
-    { label: "Identity Verification", href: "#" },
-    { label: "KYC/AML Compliance", href: "#" },
-    { label: "Fraud Prevention", href: "#" },
-    { label: "Developer API", href: "#" },
-    { label: "Pricing", href: "#" },
+  Services: [
+    { label: "Basic Site", href: "#pricing" },
+    { label: "Starter Website", href: "#pricing" },
+    { label: "Business Website", href: "#pricing" },
+    { label: "Custom Project", href: "#pricing" },
+    { label: "Website Redesign", href: "#pricing" },
   ],
   Company: [
     { label: "About", href: "#about" },
-    { label: "Careers", href: "#" },
-    { label: "Blog", href: "#" },
-    { label: "Press", href: "#" },
+    { label: "Our Work", href: "#work" },
+    { label: "Pricing", href: "#pricing" },
     { label: "Contact", href: "#contact" },
   ],
-  Resources: [
-    { label: "Documentation", href: "#" },
-    { label: "API Reference", href: "#" },
-    { label: "Status Page", href: "#" },
-    { label: "Changelog", href: "#" },
-    { label: "Security", href: "#" },
-  ],
-  Legal: [
+  Support: [
+    { label: "FAQ", href: "#" },
     { label: "Privacy Policy", href: "#" },
     { label: "Terms of Service", href: "#" },
-    { label: "Cookie Policy", href: "#" },
-    { label: "DPA", href: "#" },
   ],
 };
 
 export default function Footer() {
   return (
-    <footer id="contact" className="border-t border-slate-200/60 bg-surface-card">
+    <footer className="border-t border-slate-200/60 bg-surface-card pb-24 md:pb-0">
       <div className="mx-auto max-w-[var(--width-content)] px-6 py-16 lg:px-12">
-        {/* Top — Logo + links */}
-        <div className="grid gap-12 md:grid-cols-[1.5fr_1fr_1fr_1fr_1fr]">
-          {/* Brand column */}
+        {/* Top */}
+        <div className="grid gap-12 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+          {/* Brand */}
           <div>
             <div className="mb-4 flex items-center gap-2.5">
               <div className="flex h-9 w-9 items-center justify-center rounded-[var(--radius-sm)] bg-primary">
-                <span className="text-sm font-bold text-accent">ID</span>
+                <svg className="h-5 w-5 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 2.18l7 3.12v4.7c0 4.83-3.13 9.37-7 10.5-3.87-1.13-7-5.67-7-10.5V6.3l7-3.12z" />
+                </svg>
               </div>
-              <span className="text-lg font-semibold tracking-tight text-primary">
-                Idenlabs
+              <span className="text-lg font-bold tracking-tight text-primary">
+                IDEN
               </span>
             </div>
-            <p className="max-w-[260px] text-[15px] leading-relaxed text-slate-400">
-              Enterprise identity verification and compliance infrastructure for
-              regulated industries.
+            <p className="mb-4 max-w-[260px] text-[15px] leading-relaxed text-slate-400">
+              Professional websites for small businesses, contractors, and
+              organizations. Built to bring in real results.
             </p>
+            <a
+              href="tel:6144075190"
+              className="text-[15px] font-medium text-primary-500 transition-colors hover:text-primary"
+            >
+              (614) 407-5190
+            </a>
           </div>
 
           {/* Link columns */}
@@ -72,43 +71,15 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Divider */}
         <hr className="my-10 border-slate-200/60" />
 
-        {/* Bottom */}
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
           <p className="text-[13px] text-slate-400">
-            &copy; {new Date().getFullYear()} Idenlabs Inc. All rights reserved.
+            &copy; {new Date().getFullYear()} Iden Labs. All rights reserved.
           </p>
-          <div className="flex items-center gap-6">
-            <a
-              href="#"
-              className="text-slate-400 transition-colors hover:text-primary-500"
-              aria-label="LinkedIn"
-            >
-              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-              </svg>
-            </a>
-            <a
-              href="#"
-              className="text-slate-400 transition-colors hover:text-primary-500"
-              aria-label="GitHub"
-            >
-              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-              </svg>
-            </a>
-            <a
-              href="#"
-              className="text-slate-400 transition-colors hover:text-primary-500"
-              aria-label="Twitter"
-            >
-              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-              </svg>
-            </a>
-          </div>
+          <p className="text-[13px] text-slate-400">
+            Columbus, Ohio
+          </p>
         </div>
       </div>
     </footer>

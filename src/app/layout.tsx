@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Idenlabs — Identity Verification & Compliance Solutions",
+  title: "Iden Labs — Professional Websites That Get Results",
   description:
-    "Enterprise-grade identity verification, KYC/AML compliance, and fraud prevention. Trusted by regulated industries worldwide.",
+    "Professional websites for small businesses, contractors, and organizations. Custom designs, no templates, live in 2 weeks. Money-back guarantee.",
 };
 
 export default function RootLayout({
